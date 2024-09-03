@@ -34,7 +34,7 @@ hostname=api.revenuecat.com
 
 // ========= 动态ID ========= //
 const mapping = {
-  'Jazzed': ['plus','upahead_annual']
+  'Jazzed/': ['plus','upahead_annual']
 };
 
 // =========    固定部分  ========= // 
