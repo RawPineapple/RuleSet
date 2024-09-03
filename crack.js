@@ -7,7 +7,7 @@
 
 [mitm]
 
-hostname=api.revenuecat.com
+hostname=api.revenuecat.com,mobile.flightradar24.com
 
 ***********************************/
 
