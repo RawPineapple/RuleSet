@@ -8,4 +8,5 @@ DOMAIN-SUFFIX,vk.com
 DOMAIN-SUFFIX,mycdn.me
 DOMAIN-SUFFIX,vkuser.net
 DOMAIN-SUFFIX,okcdn.ru
+DOMAIN-SUFFIX,mail.ru
 IP-CIDR,213.248.110.0/24,no-resolve
