@@ -1,2 +1,24 @@
+var ua = $request.headers["User-Agent"] || $request.headers["user-agent"];
 
-function setHeaderValue(e,a,d){var r=a.toLowerCase();r in e?e[r]=d:e[a]=d}var modifiedHeaders=$request.headers;setHeaderValue(modifiedHeaders,"X-RevenueCat-ETag",""),$done({headers:modifiedHeaders});
+const mapping = {
+    'Jazzed/': ['plus', 'upahead_annual']
+};
+
+const match = Object.keys(mapping).find(e => ua.includes(e));
+
+function setHeaderValue(headers, headerName, value) {
+    var lowerCaseHeader = headerName.toLowerCase();
+    if (lowerCaseHeader in headers) {
+        headers[lowerCaseHeader] = value;
+    } else {
+        headers[headerName] = value;
+    }
+}
+
+var modifiedHeaders = $request.headers;
+
+if (match) {
+    setHeaderValue(modifiedHeaders, "X-RevenueCat-ETag", "");
+}
+
+$done({headers: modifiedHeaders});
