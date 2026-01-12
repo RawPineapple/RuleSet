@@ -1,7 +1,7 @@
 #!name=Tripsy
 
 [Script]
-Tripsy = type=http-response, pattern=^https?:\/\/firstclass\.tripsy\.app\/api\/v1\/receipt\/update, requires-body=1, max-size=0, script-path=unlock_receipt.js
+Tripsy = type=http-response, pattern=^https?:\/\/firstclass\.tripsy\.app\/api\/v1\/receipt\/update, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/RawPineapple/RuleSet/refs/heads/main/tripsy.js
 
 [MITM]
 hostname = %APPEND% firstclass.tripsy.app
